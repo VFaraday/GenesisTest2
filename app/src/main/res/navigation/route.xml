@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/route"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.bobryshev.genesistest2.ui.main.MainFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_viewedGitReposFragment"
+            app:destination="@id/viewedGitReposFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_detailFragment"
+            app:destination="@id/detailFragment">
+            <argument
+                android:name="htmlUrl"
+                app:argType="string"/>
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/viewedGitReposFragment"
+        android:name="com.bobryshev.genesistest2.ui.viewed.ViewedGitReposFragment"
+        android:label="ViewedGitReposFragment" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.bobryshev.genesistest2.ui.main.DetailFragment"
+        android:label="DetailFragment">
+        <argument
+            android:name="htmlUrl"
+            app:argType="string"/>
+    </fragment>
+</navigation>

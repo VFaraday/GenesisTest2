@@ -1,0 +1,2 @@
+rootProject.name = "GenesisTest2"
+include ':app'
